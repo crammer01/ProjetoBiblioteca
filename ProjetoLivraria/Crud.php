@@ -1,3 +1,3 @@
 <?php
-    require("Classes/conexao.php");
+    require("classes/conexao.php");
 ?>

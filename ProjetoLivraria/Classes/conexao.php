@@ -1,11 +1,11 @@
 <?php
-$dns = "mysql:dbname=,host:localhost";
-$user = "root";
-$pass = "";
+    $host = "localhost";
+    $usuario = "root";
+    $senha = "";
+    $bd = "biblioteca";
 
-    try{
-        $conexao = new PDO($dns,$user,$pass);
-    }catch(PDOException $e){
-        echo "Conexão com erro: ERRO".$e->getMessage();  
-    }
+    $mysqli = new mysqli($host, $usuario, $senha, $bd);
+
+    if($mysqli->connect_errno)
+        echo "Falha na conexão: (".$mysqli->connect_errno.") ".$mysqli->connect_error;
 ?>

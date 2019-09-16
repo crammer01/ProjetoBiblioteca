@@ -1,6 +1,7 @@
 <?php
  require("classes/conexao.php");
-
+    $sql = "SELECT * FROM livro";
+    $sql = $conexao->query($sql);
 ?>
 
 
@@ -39,7 +40,7 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <input type="text" name="nomelivro"  class="form-control" placeholder="Nome do Livro">
+                                            <input type="text" name="nomeLivro"  class="form-control" placeholder="Nome do Livro">
                                         </td>
                                         <td>
                                             <input type="text" name="autor"  class="form-control" placeholder="Autor Livro">
@@ -54,7 +55,8 @@
                                         </td>    
                                         
                                         <td>
-                                               <input type="file" name="img"  class="form-control" placeholder="Selecionar imagem">
+                                               <input type="file" required name="arquivo">
+        <!--<input type="submit" value="Salvar">-->
 
                                         </td>
                                         

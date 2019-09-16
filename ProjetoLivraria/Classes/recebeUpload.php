@@ -1,5 +1,5 @@
 <?php
-  include("conexao.php");
+  include("conexao1.php");
     
         $msg = false;
   
@@ -10,10 +10,10 @@
     
     move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio.$novo_nome); //efetua o upload
     
-        $sql_code = "INSERT INTO arquivo (codigo, arquivo, data) VALUES(null, '$novo_nome', NOW())";
+        $sql_code = "INSERT INTO livro (arquivo, data) VALUES('$novo_nome', NOW())";
     
         if($mysqli->query($sql_code))
-            $msg = "Arquivo enviado com sucesso!";
+            header('location: cadastro.php');
         else
             $msg = "Falha ao enviar arquivo.";
   }

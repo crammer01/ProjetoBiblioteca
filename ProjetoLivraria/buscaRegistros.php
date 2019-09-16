@@ -3,13 +3,13 @@
 require("classes/Conexao.php"); 
 
  $sql = "SELECT * FROM livro";
- $sql = $conexao->query($sql);
+ $sql = $conexao->query($sql) or die($conexao->error);
 
   if($sql->rowCount() > 0){   
     
     
-   foreach ($sql->fetchAll() as $pessoa) {
-        
+   foreach ($sql->fetchAll() as $dado) {
+        //while($dado = $sql->fetch_array()){
        
     ?>
 <html>
@@ -38,25 +38,23 @@ require("classes/Conexao.php");
             </tr>
         </thead>
         <tbody>
-
-
                 <tr>
-                    <td><?php // imprimir o ID?>   <input type="hidden" name="id"  class="form-control" value="<?php echo $pessoa['id_pessoa']?>"></td>
+                    <td><?php // imprimir o ID?>   <input type="hidden" name="ID"  class="form-control" value="<?php echo $dado['ID']?>"></td>
                     <td>
-                        <input type="text" name="nome"  class="form-control" value="<?php echo $pessoa['nome'] ?>">
+                        <input type="text" name="titulo"  class="form-control" value="<?php echo $dado['Titulo'] ?>">
                     </td>
                     <td>
-                        <input type="text" name="email"  class="form-control"value="<?php echo $pessoa['email']?>">
+                        <input type="text" name="autor"  class="form-control"value="<?php echo $dado['Autor']?>">
                     </td>
                     <td>
-                        <input type="text" name="cpf"  class="form-control" value="<?php  echo $pessoa['cpf']?>">
+                        <input type="text" name="genero"  class="form-control" value="<?php  echo $dado['Genero']?>">
                     </td>
                     <td>
-                        <input type="text" name="cpf"  class="form-control" value="<?php  echo $pessoa['cpf']?>">
+                        <input type="text" name="preco"  class="form-control" value="<?php  echo $dado['Preco']?>">
 
                     </td>
                     <td>
-                       <input type="file" name="cpf"  class="estilo" value="<?php  echo $pessoa['cpf']?>"> 
+                       <input type="file" name="imgf"  class="estilo" value="<?php  echo $livro['img']?>"> 
                         
                     </td>
                     
@@ -71,7 +69,7 @@ require("classes/Conexao.php");
     </table>
 </form>
     <?php 
-  } 
+   } 
 
 } 
 ?>

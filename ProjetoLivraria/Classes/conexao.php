@@ -1,11 +1,14 @@
 <?php
-    $host = "localhost";
-    $usuario = "root";
-    $senha = "";
-    $bd = "biblioteca";
+$dsn = "mysql:dbname=biblioteca;host=localhost";
+$user = "root";
+$pass = "";
 
-    $mysqli = new mysqli($host, $usuario, $senha, $bd);
+try{
 
-    if($mysqli->connect_errno)
-        echo "Falha na conexão: (".$mysqli->connect_errno.") ".$mysqli->connect_error;
+ $conexao = new PDO($dsn,$user,$pass);
+
+}catch(PDOException $e){
+ echo "Conexão com erro: ERRO".$e->getMessage();
+
+}
 ?>

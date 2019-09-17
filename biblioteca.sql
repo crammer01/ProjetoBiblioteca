@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16-Set-2019 às 19:44
+-- Tempo de geração: 17-Set-2019 às 19:13
 -- Versão do servidor: 10.3.16-MariaDB
 -- versão do PHP: 7.3.8
 
@@ -50,32 +50,26 @@ INSERT INTO `livro` (`ID`, `Titulo`, `Autor`, `Genero`, `Preco`, `arquivo`, `dat
 (11, 'As Crônicas de Nárnia ', 'Clive Lewes', NULL, '54.99', '', '0000-00-00'),
 (12, 'Animais fantásticos e onde hab', 'J K Rowling', NULL, '64.99', '', '0000-00-00'),
 (13, 'Percy Jackson e o mar de monst', 'Rick Riordan', NULL, '15', '', '0000-00-00'),
-(14, 'O Senhor dos Anéis ', 'Tolkin', NULL, '21.99', '', '0000-00-00'),
-(18, '', '', NULL, '', '', '0000-00-00'),
-(23, 'ronin', 'kishimoto', 'samurai', '80', 'a18496dcce6f55bf6a1baa66137bbded.jpg', '2019-09-16');
+(14, 'O Senhor dos Anéis ', 'Tolkin', NULL, '21.99', '', '0000-00-00');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuário`
+-- Estrutura da tabela `usuario`
 --
 
-CREATE TABLE `usuário` (
+CREATE TABLE `usuario` (
   `ID` int(11) NOT NULL,
-  `Email` varchar(30) NOT NULL,
-  `Senha` varchar(30) NOT NULL
+  `Email` varchar(50) NOT NULL,
+  `Senha` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `usuário`
+-- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuário` (`ID`, `Email`, `Senha`) VALUES
-(1, 'carol_luizasol@hotmail.com', 'teste'),
-(2, 'joicelopes@gmail.com', 'domingues'),
-(3, 'marcelojacobsem@gmail.com', 'batata'),
-(4, 'teste@gmail.com', 'testando'),
-(5, 'joaocaragnatto@gmail.com', 'carvalho');
+INSERT INTO `usuario` (`ID`, `Email`, `Senha`) VALUES
+(1, 'admin@hotmail.com', 'fade225f096f9138f98f29887fc1f10d');
 
 --
 -- Índices para tabelas despejadas
@@ -88,9 +82,9 @@ ALTER TABLE `livro`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Índices para tabela `usuário`
+-- Índices para tabela `usuario`
 --
-ALTER TABLE `usuário`
+ALTER TABLE `usuario`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -104,10 +98,10 @@ ALTER TABLE `livro`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT de tabela `usuário`
+-- AUTO_INCREMENT de tabela `usuario`
 --
-ALTER TABLE `usuário`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `usuario`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

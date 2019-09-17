@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 18-Set-2019 às 00:27
--- Versão do servidor: 10.3.15-MariaDB
--- versão do PHP: 7.3.6
+-- Tempo de geração: 17-Set-2019 às 19:13
+-- Versão do servidor: 10.3.16-MariaDB
+-- versão do PHP: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -43,14 +43,14 @@ CREATE TABLE `livro` (
 --
 
 INSERT INTO `livro` (`ID`, `Titulo`, `Autor`, `Genero`, `Preco`, `arquivo`, `data`) VALUES
-(1, 'Como plantar uma batata', 'Marcelo Jacobsem', '', '15', '83877804200c0c0c0e28496e7aecde61.jpg', '2019-09-17'),
-(8, 'Mil palavras', 'Jeniffer Brown', '', '32.99', '820ad28b6b241eb264f5f3df69788a83.jpg', '2019-09-17'),
-(9, 'O ultimo voo das borboletas ', 'Bruno Zago', '', '22.99', 'f9c73ad032b65bbbe71fa9db1a0041b2.jpg', '2019-09-17'),
-(10, 'Harry Potter e o Calice de Fog', 'J. K. Rowling', '', '34.99', '9901436a521e4af6f4d2335772f93875.jpg', '2019-09-17'),
-(11, 'As Cronicas de Narnia ', 'Clive Lewes', '', '54.99', '5475314d72648f7117cb3cf2d06d3354.jpg', '2019-09-17'),
-(12, 'Animais fantasticos e onde hab', 'J K Rowling', '', '64.99', '9ae6dc233a076f3c9cbbe384fd2f9b71.png', '2019-09-17'),
-(13, 'Percy Jackson e o mar de monst', 'Rick Riordan', '', '15', 'ce664f4ebd22a4a51428af1367cbfd29.jpg', '2019-09-17'),
-(14, 'O Senhor dos Aneis ', 'Tolkin', '', '21.99', 'b532f1617f3bc863833449075dd51433.jpg', '2019-09-17');
+(1, 'Como plantar uma batata', 'Marcelo Jacobsem', NULL, '15', '', '0000-00-00'),
+(8, 'Mil palavras', 'Jeniffer Brown', NULL, '32.99', '', '0000-00-00'),
+(9, 'O último voo das borboletas ', 'Bruno Zago', NULL, '22.99', '', '0000-00-00'),
+(10, 'Harry Potter e o Cálice de Fog', 'J. K. Rowling', NULL, '34.99', '', '0000-00-00'),
+(11, 'As Crônicas de Nárnia ', 'Clive Lewes', NULL, '54.99', '', '0000-00-00'),
+(12, 'Animais fantásticos e onde hab', 'J K Rowling', NULL, '64.99', '', '0000-00-00'),
+(13, 'Percy Jackson e o mar de monst', 'Rick Riordan', NULL, '15', '', '0000-00-00'),
+(14, 'O Senhor dos Anéis ', 'Tolkin', NULL, '21.99', '', '0000-00-00');
 
 -- --------------------------------------------------------
 
